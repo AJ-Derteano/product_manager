@@ -10,7 +10,7 @@ app.use(express.static('storage'));
 
 const port = process.env.PORT || 3000;
 
-app.use('/', require('./routes'))
+app.use('/api/v1/', require('./routes'))
 
 app.listen(port, () => {
   console.log(`API EXPOSE IN: http://127.0.0.1:${port}`)

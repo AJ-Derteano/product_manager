@@ -1,0 +1,1 @@
+mysqldump -v --opt --events --routines --triggers --default-character-set=utf8 -uroot -p product_manager > dump_`date +%Y%m%d_%H%M%S`.sql
