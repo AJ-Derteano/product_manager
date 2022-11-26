@@ -1,0 +1,10 @@
+DELIMITER $$
+CREATE TRIGGER categories_ins
+BEFORE INSERT ON categories
+FOR EACH ROW
+BEGIN
+  IF NEW.date_created IS NULL THEN
+    SET NEW.date_created = CURRENT_TIMESTAMP;
+		SET NEW.date_updated = CURRENT_TIMESTAMP;
+	END IF; 
+END$$
