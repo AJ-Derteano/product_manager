@@ -46,6 +46,13 @@ const {
  */
 
 /**
+ * Check route status
+ */
+router.get('/status', (req, res) => {
+  res.status(200).send('Api for category status is ok')
+})
+
+/**
  * Get all active categories
  */
 router.get('/', findAll)
@@ -69,12 +76,5 @@ router.delete('/:id', softDeleteCategory)
  * Edit category by its identifier
  */
 router.put('/update/:id', validatorUpdateItem, updateCategory)
-
-/**
- * Check route status
- */
-router.get('/status', (req, res) => {
-  res.status(200).send('Categories')
-})
 
 module.exports = router
