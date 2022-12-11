@@ -30,8 +30,8 @@ const getAllBrands = async (req, res) => {
     let brands = await knex('brands').select().where({ status: 1 })
     handleHttpResponse(res, brands)
   } catch (err) {
-    console.log(`[WH:ERROR_FIND_ALL] ${err}`)
-    handleHttpError(res, `[WH:ERROR_FIND_ALL] ${err}`)
+    console.log(`[BRANDS:ERROR_FIND_ALL] ${err}`)
+    handleHttpError(res, `[BRANDS:ERROR_FIND_ALL] ${err}`)
   }
 }
 
@@ -52,8 +52,8 @@ const getBrandById = async (req, res) => {
 
     handleHttpResponse(res, brand)
   } catch (err) {
-    console.log(`[WH:ERROR_FIND_ONE_BY_ID] ${err}`)
-    handleHttpError(res, `[WH:ERROR_FIND_ONE_BY_ID] ${err}`)
+    console.log(`[BRANDS:ERROR_FIND_ONE_BY_ID] ${err}`)
+    handleHttpError(res, `[BRANDS:ERROR_FIND_ONE_BY_ID] ${err}`)
   }
 }
 
@@ -69,8 +69,8 @@ const getAllBrandsDelete = async (req, res) => {
     let brands = await knex('brands').select().where({ status: 0 })
     handleHttpResponse(res, brands)
   } catch (err) {
-    console.log(`[WH:ERROR_FIND_ALL] ${err}`)
-    handleHttpError(res, `[WH:ERROR_FIND_ALL] ${err}`)
+    console.log(`[BRANDS:ERROR_FIND_ALL_DELETE] ${err}`)
+    handleHttpError(res, `[BRANDS:ERROR_FIND_ALL_DELETE] ${err}`)
   }
 }
 
@@ -91,8 +91,8 @@ const getBrandByIdDelete = async (req, res) => {
 
     handleHttpResponse(res, brand)
   } catch (err) {
-    console.log(`[WH:ERROR_FIND_ONE_BY_ID] ${err}`)
-    handleHttpError(res, `[WH:ERROR_FIND_ONE_BY_ID] ${err}`)
+    console.log(`[BRANDS:ERROR_FIND_ONE_BY_ID] ${err}`)
+    handleHttpError(res, `[BRANDS:ERROR_FIND_ONE_BY_ID] ${err}`)
   }
 }
 
@@ -115,8 +115,8 @@ const createBrand = async (req, res) => {
 
     handleHttpResponse(res, { id: id[0] })
   } catch (err) {
-    console.log(`[WH:ERROR_CREATE] ${err}`)
-    handleHttpError(res, `[WH:ERROR_CREATE] ${err}`)
+    console.log(`[BRANDS:ERROR_CREATE] ${err}`)
+    handleHttpError(res, `[BRANDS:ERROR_CREATE] ${err}`)
   }
 
 }
@@ -140,8 +140,8 @@ const deleteBrand = async (req, res) => {
 
     handleHttpResponse(res, brand)
   } catch (err) {
-    console.log(`[WH:ERROR_DELETE] ${err}`)
-    handleHttpError(res, `[WH:ERROR_DELETE] ${err}`)
+    console.log(`[BRANDS:ERROR_DELETE] ${err}`)
+    handleHttpError(res, `[BRANDS:ERROR_DELETE] ${err}`)
   }
 }
 
@@ -171,8 +171,8 @@ const updateBrand = async (req, res) => {
 
     handleHttpResponse(res, brand)
   } catch (err) {
-    console.log(`[WH:ERROR_UPDATE] ${err}`)
-    handleHttpError(res, `[WH:ERROR_UPDATE] ${err}`)
+    console.log(`[BRANDS:ERROR_UPDATE] ${err}`)
+    handleHttpError(res, `[BRANDS:ERROR_UPDATE] ${err}`)
   }
 }
 
